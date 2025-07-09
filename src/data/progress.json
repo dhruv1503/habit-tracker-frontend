@@ -1,0 +1,107 @@
+{
+  "project": "FitMentor",
+  "summary": "A mobile-first AI-driven habit tracker helping professionals build lasting habits around fitness, productivity, and screen time.",
+  "lastUpdated": "2025-07-10T12:00:00Z",
+  "tasks": [
+    {
+      "task": "Set up Next.js project with App Router 🚀",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "Theme setup using MUI for auth layout 🎨",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "Homepage and login routes (SSR) 🏠🔐",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "CSR + SSR hybrid rendering setup ⚙️",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "Sign-up form (basic multi-step) 📝",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "NestJS backend with MongoDB connected 🛠️",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "JWT auth backend setup (basic) 🔐",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "Sign-up UI validation and error messages ✅",
+      "status": "done",
+      "colorCode": "#4caf50"
+    },
+    {
+      "task": "User dashboard (protected route) 📊",
+      "status": "in_progress",
+      "colorCode": "#ff9800"
+    },
+    {
+      "task": "Habit creation API and logic 🧠",
+      "status": "in_progress",
+      "colorCode": "#ff9800"
+    },
+    {
+      "task": "Screen time tracking plan (mobile) 📱⏳",
+      "status": "in_progress",
+      "colorCode": "#ff9800"
+    },
+    {
+      "task": "AWS EC2 backend deployment ☁️",
+      "status": "in_progress",
+      "colorCode": "#ff9800"
+    },
+    {
+      "task": "Progress page with roadmap 📍",
+      "status": "in_progress",
+      "colorCode": "#ff9800"
+    },
+    {
+      "task": "Habit consistency and streak tracking 🔁",
+      "status": "todo",
+      "colorCode": "#f44336"
+    },
+    {
+      "task": "Focus mode for screen time enforcement 🎯",
+      "status": "todo",
+      "colorCode": "#f44336"
+    },
+    {
+      "task": "AI assistant (OpenAI/Gemini integration, Yet to benchmark) 🤖",
+      "status": "todo",
+      "colorCode": "#f44336"
+    },
+    {
+      "task": "Email reminders and daily reports 📧",
+      "status": "todo",
+      "colorCode": "#f44336"
+    },
+    {
+      "task": "Leaderboard and social sharing 📈🌐",
+      "status": "todo",
+      "colorCode": "#f44336"
+    },
+    {
+      "task": "Mobile app with native step tracking 👟📱",
+      "status": "todo",
+      "colorCode": "#f44336"
+    },
+    {
+      "task": "Migrate to full JIRA-based workflow 🧾",
+      "status": "todo",
+      "colorCode": "#f44336"
+    }
+  ]
+}
