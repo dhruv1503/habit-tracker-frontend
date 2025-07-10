@@ -16,7 +16,7 @@ export default function Navbar() {
           <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
             <Brain className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold text-gray-900 dark:text-white">FitMentor</span>
+          <span className="text-xl font-bold text-black">FitMentor</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -39,7 +39,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/login"
-            className="hidden md:inline-block bg-white text-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+            className="hidden md:inline-block bg-white text-blue-600 px-5 py-2 rounded-lg"
           >
             Login
           </Link>

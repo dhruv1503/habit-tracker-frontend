@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, Typography, Grid, Box, Chip, Divider, Stack } from "@mui/material";
-import { data } from "@/data/progress.json";
+import data from "@/data/progress.json";
 
 const statusColors = {
   done: { bg: "#e8f5e9", color: "#2e7d32" },
@@ -16,7 +16,7 @@ export default function ProgressPage() {
         FitMentor Build Progress
       </Typography>
       <Grid direction="column" alignItems="center" container spacing={4}>
-        {data.map((release) => (
+        {data.data.map((release) => (
           <Grid item xs={12} sm={6} md={6} lg={6} key={release.version}>
             <Card elevation={4} sx={{ maxWidth: "400px" }}>
               <Box
