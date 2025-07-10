@@ -1,107 +1,130 @@
 {
-  "project": "FitMentor",
-  "summary": "A mobile-first AI-driven habit tracker helping professionals build lasting habits around fitness, productivity, and screen time.",
-  "lastUpdated": "2025-07-10T12:00:00Z",
-  "tasks": [
+  "data": [
     {
-      "task": "Set up Next.js project with App Router 🚀",
+      "version": "v0",
+      "type": "major",
+      "title": "Initial MVP Release",
+      "summary": "Basic authentication, landing page, and changelog UI for FitMentor.",
       "status": "done",
-      "colorCode": "#4caf50"
+      "changes": [
+        {
+          "type": "feature",
+          "title": "User Authentication",
+          "description": "Sign up and login system with hashed passwords and JWT token generation.",
+          "impact": "High"
+        },
+        {
+          "type": "feature",
+          "title": "Landing Page (SSR)",
+          "description": "Fully responsive public-facing SSR homepage with branding.",
+          "impact": "High"
+        },
+        {
+          "type": "feature",
+          "title": "Changelog Page",
+          "description": "Beautiful MUI-based changelog page to showcase roadmap and progress.",
+          "impact": "Medium"
+        }
+      ]
     },
     {
-      "task": "Theme setup using MUI for auth layout 🎨",
-      "status": "done",
-      "colorCode": "#4caf50"
+      "version": "v1",
+      "type": "major",
+      "title": "Multi-Step Signup & Habit Tracking",
+      "summary": "Introduced user profiling and initial habit tracking with offline support.",
+      "status": "in progress",
+      "changes": [
+        {
+          "type": "feature",
+          "title": "Multi-Step Signup Flow",
+          "description": "Progressive onboarding asking for email, name, profession, and habits.",
+          "impact": "High"
+        },
+        {
+          "type": "feature",
+          "title": "Habit Tracker UI",
+          "description": "Basic daily habit inputs for calorie tracking and custom user habits.",
+          "impact": "High"
+        },
+        {
+          "type": "feature",
+          "title": "PWA Support",
+          "description": "Offline-first support using Progressive Web App capabilities.",
+          "impact": "Medium"
+        },
+        {
+          "type": "improvement",
+          "title": "Better Responsiveness",
+          "description": "Improved layout and mobile-friendliness.",
+          "impact": "Medium"
+        }
+      ]
     },
     {
-      "task": "Homepage and login routes (SSR) 🏠🔐",
-      "status": "done",
-      "colorCode": "#4caf50"
-    },
-    {
-      "task": "CSR + SSR hybrid rendering setup ⚙️",
-      "status": "done",
-      "colorCode": "#4caf50"
-    },
-    {
-      "task": "Sign-up form (basic multi-step) 📝",
-      "status": "done",
-      "colorCode": "#4caf50"
-    },
-    {
-      "task": "NestJS backend with MongoDB connected 🛠️",
-      "status": "done",
-      "colorCode": "#4caf50"
-    },
-    {
-      "task": "JWT auth backend setup (basic) 🔐",
-      "status": "done",
-      "colorCode": "#4caf50"
-    },
-    {
-      "task": "Sign-up UI validation and error messages ✅",
-      "status": "done",
-      "colorCode": "#4caf50"
-    },
-    {
-      "task": "User dashboard (protected route) 📊",
-      "status": "in_progress",
-      "colorCode": "#ff9800"
-    },
-    {
-      "task": "Habit creation API and logic 🧠",
-      "status": "in_progress",
-      "colorCode": "#ff9800"
-    },
-    {
-      "task": "Screen time tracking plan (mobile) 📱⏳",
-      "status": "in_progress",
-      "colorCode": "#ff9800"
-    },
-    {
-      "task": "AWS EC2 backend deployment ☁️",
-      "status": "in_progress",
-      "colorCode": "#ff9800"
-    },
-    {
-      "task": "Progress page with roadmap 📍",
-      "status": "in_progress",
-      "colorCode": "#ff9800"
-    },
-    {
-      "task": "Habit consistency and streak tracking 🔁",
+      "version": "v2",
+      "type": "major",
+      "title": "LLM Integration & AI Habit Suggestions",
+      "summary": "AI-driven features to suggest, improve, and analyze habits.",
       "status": "todo",
-      "colorCode": "#f44336"
+      "changes": [
+        {
+          "type": "feature",
+          "title": "LLM Chat Integration",
+          "description": "Ask questions and get feedback using AI chat (OpenAI / Gemini).",
+          "impact": "High"
+        },
+        {
+          "type": "feature",
+          "title": "Habit Suggestions via AI",
+          "description": "Based on user profile, suggest new relevant habits.",
+          "impact": "High"
+        },
+        {
+          "type": "feature",
+          "title": "Email Verification",
+          "description": "Send verification links to users via email.",
+          "impact": "Medium"
+        },
+        {
+          "type": "improvement",
+          "title": "Validation & Rate Limiting",
+          "description": "Prevent abuse with API rate limits and DTO-based input validation.",
+          "impact": "High"
+        }
+      ]
     },
     {
-      "task": "Focus mode for screen time enforcement 🎯",
+      "version": "v2.5",
+      "type": "major",
+      "title": "Mobile Integration & Native Modules",
+      "summary": "Added mobile-first features like screen time and steps tracking.",
       "status": "todo",
-      "colorCode": "#f44336"
-    },
-    {
-      "task": "AI assistant (OpenAI/Gemini integration, Yet to benchmark) 🤖",
-      "status": "todo",
-      "colorCode": "#f44336"
-    },
-    {
-      "task": "Email reminders and daily reports 📧",
-      "status": "todo",
-      "colorCode": "#f44336"
-    },
-    {
-      "task": "Leaderboard and social sharing 📈🌐",
-      "status": "todo",
-      "colorCode": "#f44336"
-    },
-    {
-      "task": "Mobile app with native step tracking 👟📱",
-      "status": "todo",
-      "colorCode": "#f44336"
-    },
-    {
-      "task": "Migrate to full JIRA-based workflow 🧾",
-      "status": "todo",
-      "colorCode": "#f44336"
+      "changes": [
+        {
+          "type": "feature",
+          "title": "React Native Modules",
+          "description": "Integrated Android/iOS native modules for screen time and step tracking.",
+          "impact": "High"
+        },
+        {
+          "type": "feature",
+          "title": "Focus Mode",
+          "description": "Temporarily disable distractions and gamify productivity.",
+          "impact": "Medium"
+        },
+        {
+          "type": "feature",
+          "title": "Daily/Weekly Reports",
+          "description": "User receives habit progress reports via email.",
+          "impact": "Medium"
+        },
+        {
+          "type": "improvement",
+          "title": "Gamification",
+          "description": "Badges and streaks to encourage consistency.",
+          "impact": "Medium"
+        }
+      ]
     }
   ]
 }

@@ -2,87 +2,88 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Brain, Menu, X } from "lucide-react";
+import clsx from "clsx";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-blue-600">
-          HabitAI
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <Brain className="w-5 h-5 text-white" />
+          </div>
+          <span className="text-xl font-bold text-gray-900 dark:text-white">FitMentor</span>
         </Link>
 
-        {/* Desktop menu */}
-        <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          {/* <Link href="/features" className="hover:text-blue-600">
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
             Features
           </Link>
-          <Link href="/pricing" className="hover:text-blue-600">
-            Pricing
+          <Link href="/progress" className="text-gray-600 hover:text-gray-900 transition-colors">
+            Track Progress
           </Link>
-          <Link href="/support" className="hover:text-blue-600">
-            Support
-          </Link> */}
-          <Link href="/progress">Track our Progress</Link>
         </nav>
 
-        {/* CTA */}
-        <Link
-          href="/signup"
-          className="hidden md:inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
-        >
-          Sign up
-        </Link>
-        <Link
-          href="/login"
-          className="hidden md:inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
-        >
-          Login
-        </Link>
-
-        {/* Mobile menu toggle */}
-        <button
-          className="md:hidden text-gray-700 focus:outline-none"
-          onClick={() => setOpen(!open)}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            viewBox="0 0 24 24"
+        {/* Desktop Buttons */}
+        <div className="hidden md:flex items-center space-x-3">
+          <Link
+            href="/signup"
+            className="hidden md:inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-white px-5 py-2 rounded-lg"
           >
-            {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+            Sign up
+          </Link>
+          <Link
+            href="/login"
+            className="hidden md:inline-block bg-white text-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+          >
+            Login
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-gray-700 dark:text-white"
+          aria-label="Toggle Menu"
+        >
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile menu dropdown */}
-      {open && (
-        <div className="md:hidden bg-white px-4 pb-4 space-y-3 shadow-md">
-          <Link href="/features" className="block text-gray-700">
+      {/* Mobile Dropdown */}
+      <div
+        className={clsx(
+          "md:hidden transition-all duration-300 overflow-hidden",
+          menuOpen ? "max-h-screen" : "max-h-0",
+        )}
+      >
+        <nav className="bg-white dark:bg-gray-900 px-4 py-4 space-y-3 border-t border-gray-200 dark:border-gray-700">
+          <Link href="#features" className="block text-gray-700 dark:text-gray-300">
             Features
           </Link>
-          <Link href="/pricing" className="block text-gray-700">
-            Pricing
-          </Link>
-          <Link href="/support" className="block text-gray-700">
-            Support
-          </Link>
-          <Link
-            href="/get-started"
-            className="block bg-blue-600 text-white text-center py-2 rounded-lg"
-          >
-            Get Started
-          </Link>
-        </div>
-      )}
+          <div className="flex flex-col space-y-2 pt-2">
+            <Link
+              href="/signup"
+              className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg text-sm hover:from-purple-700 hover:to-blue-700"
+            >
+              Sign up
+            </Link>
+            <Link
+              href="/login"
+              className="hidden md:inline-block bg-white text-blue-600 px-5 py-2 rounded-lg"
+            >
+              Login
+            </Link>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }
+
+//
