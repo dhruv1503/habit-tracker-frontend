@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -43,7 +43,7 @@ export default function SignupPage() {
   const onSubmit: SubmitHandler<RegistrationFormFields> = (values) => {
     console.log(values);
   };
-  const handlErrors = (errors) => {
+  const handlErrors: SubmitErrorHandler<RegistrationFormFields> = (errors) => {
     console.log(errors);
   };
 
